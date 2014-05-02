@@ -1,7 +1,8 @@
+set nocompatible              " be iMproved, required
 filetype off                  " required
-syntax on
+
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.homesick/vim/bundle/vundle
 call vundle#rc()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'

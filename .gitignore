@@ -1,0 +1,4 @@
+*.log
+promptline.sh
+tmuxline.conf
+vim

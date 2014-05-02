@@ -1,0 +1,9 @@
+alias nomux="killall tmux"
+
+
+function remux {
+	vim +'Tmuxline lightline' +'TmuxlineSnapshot! ~/.homesick/tmuxline.conf' +qall! ;
+}
+alias remux=remux
+
+alias reprompt="vim +'PromptlineSnapshot! ~/.homesick/promptline.sh' +qall"
