@@ -39,21 +39,21 @@ fi
 # https://github.com/Lokaltog/powerline-fonts
 echo "link files ...";
 echo "Link vimrc => ~/.vimrc";
-if [ -f ~/.vimrc && ! -f ~/vimrc.bak ];then
+if [ -f ~/.vimrc ] && ! [ -f ~/vimrc.bak ];then
 	echo ".vimirc found. backed up to vimrc.bak"
 	mv ~/.vimrc ~/vimrc.bak
 fi
 ln -sf ~/.homesick/vimrc ~/.vimrc
 
 #echo "Link vim => ~/.vim";
-if [ -d ~/.vim && ! -d ~/vim.bak  ];then
+if [ -d ~/.vim ] && ! [ -d ~/vim.bak ];then
 	echo ".vim folder found. backed up to vim.bak"
 	mv ~/.vim ~/vim.bak
 fi
 #ln -sf ~/.homesick/vim ~/.vim
 
 echo "Link vimrc => ~/.vimrc";
-if [ -f ~/.tmux.conf && ! -f ~/tmux.conf.bak ];then
+if [ -f ~/.tmux.conf ] && ! [ -f ~/tmux.conf.bak ];then
         echo ".tmux.conf found. backed up to tmux.conf.bak"
         mv ~/.tmux.conf ~/tmux.conf.bak
 fi

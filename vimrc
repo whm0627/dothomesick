@@ -10,9 +10,9 @@ call vundle#rc()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
-"Bundle 'bling/vim-airline'
+Bundle 'bling/vim-airline'
 Bundle 'edkolev/promptline.vim'
-Bundle 'itchyny/lightline.vim'
+"Bundle 'itchyny/lightline.vim'
 Bundle 'joonty/vdebug.git'
 Bundle 'edkolev/tmuxline.vim'
 filetype plugin indent on     " required
@@ -32,39 +32,42 @@ set laststatus=2
 set t_Co=256
 
 let g:airline_theme="wombat"
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 "if !exists('g:airline_symbols')
 " let g:airline_symbols = {}
 "endif
 "let g:airline_symbols.space = "\ua0"
 
 " ================== lightline ===================
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' },
-      \ }
-let g:airline_branch_prefix     = '⭠'
-let g:promptline_symbols = {
-    \ 'left'       : '⮀',
-    \ 'left_alt'   : '>',
-    \ 'dir_sep'    : '/',
-    \ 'truncation' : '...',
-    \ 'vcs_branch' : '⭠',
-    \ 'space'      : ' '}
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"      \ 'component': {
+"      \   'readonly': '%{&readonly?"⭤":""}',
+"      \ },
+"      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+"      \ 'subseparator': { 'left': '⮁', 'right': '⮃' },
+"      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"     \ }
+"let g:airline_branch_prefix     = '⭠'
+"let g:promptline_symbols = {
+"    \ 'left'       : '⮀',
+"    \ 'left_alt'   : '⮁',
+"    \ 'dir_sep'    : '/',
+"    \ 'truncation' : '...',
+"    \ 'vcs_branch' : '⭠',
+"    \ 'space'      : ' '}
 let g:promptline_powerline_symbols = 1 
-"let g:airline#extensions#tmuxline#enabled = 1
-let g:tmuxline_theme = "lightline"
+let g:airline#extensions#tmuxline#enabled = 1
+"let g:tmuxline_theme = "lightline"
 
-let g:tmuxline_separators = {
-    \ 'left'       : '⮀',
-    \ 'left_alt'   : '>',
-    \ 'right'      : '⮂',
-    \ 'dir_sep'    : '/',
-    \ 'truncation' : '...',
-    \ 'vcs_branch' : '⭠',
-    \ 'space'      : ' '}
+"let g:tmuxline_separators = {
+"    \ 'left'       : '⮀',
+"    \ 'left_alt'   : '>',
+"    \ 'right'      : '⮂',
+"    \ 'dir_sep'    : '/',
+"    \ 'truncation' : '...',
+"    \ 'vcs_branch' : '⭠',
+"    \ 'space'      : ' '}

@@ -2,7 +2,7 @@ alias nomux="killall tmux"
 alias tmux="TERM=screen-256color-bce tmux"
 
 function remux {
-	vim +'Tmuxline lightline' +'TmuxlineSnapshot! ~/.homesick/tmuxline.conf' +qall! ;
+	vim +'Tmuxline airline' +'TmuxlineSnapshot! ~/.homesick/tmuxline.conf' +qall! ;
 }
 alias remux=remux
 
