@@ -56,8 +56,8 @@ let g:promptline_symbols = {
     \ 'truncation' : '...',
     \ 'vcs_branch' : '⭠',
     \ 'space'      : ' '}
-"let g:promptline_powerline_symbols = 1 
-let g:airline#extensions#tmuxline#enabled = 1
+let g:promptline_powerline_symbols = 1 
+"let g:airline#extensions#tmuxline#enabled = 1
 let g:tmuxline_theme = "lightline"
 
 let g:tmuxline_separators = {

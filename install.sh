@@ -86,7 +86,7 @@ else
 fi
 sleep 1;
 # send command to tmux session
-tmux send-key C-z C-c Enter "vim +'Tmuxline lightline' +'TmuxlineSnapshot! ~/.homesick/tmuxline.conf'" Enter
+tmux send-key C-z C-c Enter "vim +'Tmuxline lightline full' +'TmuxlineSnapshot! ~/.homesick/tmuxline.conf'" Enter
 echo "wait for 3 seconds to make sure the script is done"
 sleep 3;
 nomux
