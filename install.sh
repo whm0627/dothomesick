@@ -1,4 +1,4 @@
-w
+
 #!/bin/bash
 export PMR='none';
 export OS_NAME='none';
@@ -33,7 +33,7 @@ fi
 if [ -d "vim/bundle/vundle" ]; then
 	echo "Vundle is installed. Skip";
 else
-	git clone https://github.com/gmarik/Vundle.vim.git ~/.homesick/vim/bundle/vundle
+	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 fi
 
 # https://github.com/Lokaltog/powerline-fonts

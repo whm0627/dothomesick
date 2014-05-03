@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.homesick/vim/bundle/vundle
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
@@ -12,9 +12,11 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 Bundle 'bling/vim-airline'
 Bundle 'edkolev/promptline.vim'
+Bundle 'rainbow_parentheses.vim'
 "Bundle 'itchyny/lightline.vim'
 Bundle 'joonty/vdebug.git'
 Bundle 'edkolev/tmuxline.vim'
+Bundle 'tpope/vim-surround'
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -31,43 +33,35 @@ set encoding=utf-8
 set laststatus=2
 set t_Co=256
 
-let g:airline_theme="wombat"
+let g:airline_theme="bubblegum"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-"if !exists('g:airline_symbols')
-" let g:airline_symbols = {}
-"endif
-"let g:airline_symbols.space = "\ua0"
-
-" ================== lightline ===================
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ 'component': {
-"      \   'readonly': '%{&readonly?"⭤":""}',
-"      \ },
-"      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-"      \ 'subseparator': { 'left': '⮁', 'right': '⮃' },
-"      \ }
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"     \ }
-"let g:airline_branch_prefix     = '⭠'
-"let g:promptline_symbols = {
-"    \ 'left'       : '⮀',
-"    \ 'left_alt'   : '⮁',
-"    \ 'dir_sep'    : '/',
-"    \ 'truncation' : '...',
-"    \ 'vcs_branch' : '⭠',
-"    \ 'space'      : ' '}
 let g:promptline_powerline_symbols = 1 
 let g:airline#extensions#tmuxline#enabled = 1
-"let g:tmuxline_theme = "lightline"
 
-"let g:tmuxline_separators = {
-"    \ 'left'       : '⮀',
-"    \ 'left_alt'   : '>',
-"    \ 'right'      : '⮂',
-"    \ 'dir_sep'    : '/',
-"    \ 'truncation' : '...',
-"    \ 'vcs_branch' : '⭠',
-"    \ 'space'      : ' '}
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]

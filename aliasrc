@@ -6,4 +6,4 @@ function remux {
 }
 alias remux=remux
 
-alias reprompt="vim +'PromptlineSnapshot! ~/.homesick/promptline.sh' +qall"
+alias reprompt="vim +'PromptlineSnapshot! ~/.homesick/promptline.sh airline' +qall"
