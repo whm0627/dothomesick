@@ -13,10 +13,13 @@ Plugin 'gmarik/vundle'
 Bundle 'bling/vim-airline'
 Bundle 'edkolev/promptline.vim'
 Bundle 'rainbow_parentheses.vim'
+Bundle 'scrooloose/nerdtree'
 "Bundle 'itchyny/lightline.vim'
 Bundle 'joonty/vdebug.git'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'moll/vim-node'
+
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -29,6 +32,8 @@ filetype plugin indent on     " required
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Plugin commands are not allowed.
 " Put your stuff after this line
+map <C-n> :NERDTreeToggle<CR>
+
 set encoding=utf-8
 set laststatus=2
 set t_Co=256
