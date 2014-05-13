@@ -30,7 +30,7 @@ if ! which git >/dev/null; then
 	echo "Cannot install git via $PMR, you can try to install it manually and come back."
 	exit 1;
 fi
-if [ -d "vim/bundle/vundle" ]; then
+if [ -d "~/.vim/bundle/vundle" ]; then
 	echo "Vundle is installed. Skip";
 else
 	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
