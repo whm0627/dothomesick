@@ -138,16 +138,13 @@ function __promptline_right_prompt {
 
 function __dcolor(){
   local hash="$(hostname | md5sum)"
-  local r="$(echo $hash | /bin/cut -c 1-2)"
-  local g="$(echo $hash | /bin/cut -c 3-4)"
   local b="$(echo $hash | /bin/cut -c 5-6)"
-  printf "%s" "${r};${g};${b}"
+  printf "%s" "${b}"
 }
 
 function __promptline {
   local last_exit_code="$?"
   local dc="$(__dcolor)"
-  dc="48;5;150"
   local esc=$'[' end_esc=m
   if [[ -n ${ZSH_VERSION-} ]]; then
     local noprint='%{' end_noprint='%}'
@@ -162,11 +159,10 @@ function __promptline {
   local alt_rsep=""
   local reset="${wrap}0${end_wrap}"
   local reset_bg="${wrap}49${end_wrap}"
-  local a_fg="${wrap}38;5;23${end_wrap}"
-  local a_bg="${wrap}48;5;150${end_wrap}"
-  local a_bg=$wrap+$dc+$end_wrap
-  local a_sep_fg="${a_bg}"
-  local b_fg="${wrap}38;5;249${end_wrap}"
+  local a_fg="${wrap}38;5;$((256 - dc))${end_wrap}"
+  local a_bg="${wrap}48;5;${dc}${end_wrap}"
+  local a_sep_fg="${wrap}38;5;${dc}${end_wrap}"
+  local b_fg="${wrap}38;5;${dc}${end_wrap}"
   local b_bg="${wrap}48;5;237${end_wrap}"
   local b_sep_fg="${wrap}38;5;237${end_wrap}"
   local c_fg="${wrap}38;5;150${end_wrap}"
