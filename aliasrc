@@ -1,9 +1,26 @@
 alias nomux="killall tmux"
 alias tmux="TERM=screen-256color-bce tmux"
 
-function remux {
-	vim +'Tmuxline airline' +'TmuxlineSnapshot! ~/.homesick/tmuxline.conf' +qall! ;
+function remux(){
+	vim +'Tmuxline airline' +'TmuxlineSnapshot! ~/.homesick/tmuxline.conf' +qall! 
 }
+
+function scd(){
+	DIR=`find . -regextype sed -type d -regex ".*$1.*$2.*$3.*" | head -1`
+		if [ -n "$DIR" ]
+			then
+				cd $DIR
+		else
+			exit 1
+				fi
+
+}
+
+
+
+
 alias remux=remux
 
 alias reprompt="vim +'PromptlineSnapshot! ~/.homesick/promptline.sh airline' +qall"
+
+
