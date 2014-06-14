@@ -8,6 +8,9 @@ call vundle#rc()
 "let path = '~/some/path/here'
 "call vundle#rc(path)
 
+map <C-a> <esc>ggVG<CR>
+
+
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Bundle 'bling/vim-airline'
@@ -37,6 +40,12 @@ map <C-n> :NERDTreeToggle<CR>
 set encoding=utf-8
 set laststatus=2
 set t_Co=256
+
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 
 let g:airline_theme="bubblegum"
 let g:airline#extensions#tabline#enabled = 1
