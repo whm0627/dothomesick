@@ -6,7 +6,7 @@ function remux(){
 }
 
 function scd(){
-	DIR=`find . -depth -regextype sed -type d -iregex ".*$1.*$2.*$3.*" -print -quit| head -1`
+	DIR=`find . -regextype sed -type d -iregex ".*$1.*$2.*$3.*" -print -quit| head -1`
 		if [ -n "$DIR" ]
 			then
 			cd $DIR
