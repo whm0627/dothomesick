@@ -22,6 +22,8 @@ Bundle 'joonty/vdebug.git'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'moll/vim-node'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'ctrlp/ctrlp'
 
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
