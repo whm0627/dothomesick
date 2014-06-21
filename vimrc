@@ -23,7 +23,7 @@ Bundle 'edkolev/tmuxline.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'moll/vim-node'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'ctrlp/ctrlp'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
