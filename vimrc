@@ -23,7 +23,6 @@ Bundle 'joonty/vdebug.git'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'moll/vim-node'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on     " required

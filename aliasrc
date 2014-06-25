@@ -14,11 +14,9 @@ function scd(){
 
 }
 
-
-
-
 alias remux=remux
 
 alias reprompt="vim +'PromptlineSnapshot! ~/.homesick/promptline.sh airline' +qall"
-
+alias ls="ls --color"
+alias ll='ls -la --color'
 
