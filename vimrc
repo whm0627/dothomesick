@@ -24,7 +24,8 @@ Bundle 'edkolev/tmuxline.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'moll/vim-node'
 Bundle 'kien/ctrlp.vim'
-
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'fatih/vim-go'
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -51,8 +52,8 @@ set expandtab
 
 let g:airline_theme="bubblegum"
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:promptline_powerline_symbols = 1 
+let g:airline_powerline_fonts = 0
+let g:promptline_powerline_symbols = 0 
 let g:airline#extensions#tmuxline#enabled = 1
 
 let g:rbpt_max = 16
